@@ -1,0 +1,171 @@
+import 'package:flutter/material.dart';
+import '../../routes/app_routes.dart';
+//import '../../core/constants/colors.dart'; // 
+
+class LoginScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF1B5E20), // 
+      body: Center(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24.0),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16.0),
+            ),
+            padding: const EdgeInsets.all(24.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Text(
+                  'Welcome Back',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: const Color(0xFF1B5E20),
+                  ),
+                ),
+                SizedBox(height: 16.0),
+                Text(
+                  'Let\'s get you back into your account!',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.grey[700],
+                  ),
+                ),
+                SizedBox(height: 24.0),
+                Text(
+                  'To log in, simply type in your phone number in the box below. Make sure you include your country code (for example, +263 for Zimbabwe).',
+                  style: TextStyle(
+                    fontSize: 14.0,
+                    color: Colors.grey[600],
+                  ),
+                ),
+                SizedBox(height: 16.0),
+                Text(
+                  'On the next screen, you\'ll enter that code to confirm it\'s you and access your account.',
+                  style: TextStyle(
+                    fontSize: 14.0,
+                    color: Colors.grey[600],
+                  ),
+                ),
+                SizedBox(height: 24.0),
+                Text(
+                  'Enter your phone number:',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.grey[800],
+                  ),
+                ),
+                SizedBox(height: 8.0),
+                TextField(
+                  keyboardType: TextInputType.phone,
+                  decoration: InputDecoration(
+                    hintText: 'e.g., +263 7XXXXXXXXX',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: BorderSide(color: Colors.grey[400]!),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: BorderSide(color: const Color(0xFF1B5E20), width: 2.0),
+                    ),
+                    contentPadding: EdgeInsets.all(16.0),
+                  ),
+                ),
+                SizedBox(height: 24.0),
+                ElevatedButton(
+                  onPressed: () {
+                    //logic
+                    print('Request OTP');
+                    
+                    Navigator.pushNamed(context, AppRoutes.otpVerification,
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF1B5E20),
+                    padding: EdgeInsets.symmetric(vertical: 16.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                  ),
+                  child: Text(
+                    'Request OTP',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 16.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'Need help? ',
+                      style: TextStyle(color: Colors.grey[600]),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                       
+                        print('Support');
+                      },
+                      child: Text(
+                        'Support',
+                        style: TextStyle(
+                          color: const Color(0xFF1B5E20),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'New to Mkando? ',
+                      style: TextStyle(color: Colors.grey[600]),
+                    ),
+                    TextButton(
+                      onPressed: () {
+
+                       
+                        print('Sign Up');
+                          Navigator.pushNamed(context, AppRoutes.signup,
+                    );
+                      },
+                      child: Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          color: const Color(0xFF1B5E20),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 24.0),
+                Text(
+                  'By continuing, you agree to our Terms and Conditions and Privacy Policy.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.grey[500],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
