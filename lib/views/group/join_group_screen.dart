@@ -62,8 +62,7 @@ class JoinGroupScreen extends StatelessWidget {
                     alignment: Alignment.center,
                     child: TextButton.icon(
                       onPressed: () {
-                        // TODO: Implement Scan QR Code functionality
-                        print('Scan QR Code');
+                          Navigator.pushNamed(context, AppRoutes.qr);
                       },
                       icon: Icon(Icons.qr_code_scanner,
                           color: const Color(0xFF1B5E20)),
@@ -79,7 +78,7 @@ class JoinGroupScreen extends StatelessWidget {
             SizedBox(height: 24.0),
             ElevatedButton(
               onPressed: () {
-                // TODO: Implement join group logic with _inviteCodeController.text
+                
                 print('Join Group with code: ${_inviteCodeController.text}');
                 Navigator.pushNamed(context, AppRoutes.dashboard);
               },

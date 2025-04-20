@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import '../../routes/app_routes.dart';
 import '../../services/group_service.dart';
@@ -19,49 +17,49 @@ class _CreateGroupScreenState extends State<CreateGroupScreen> {
 
   List<String> _cycleTypes = ['Daily', 'Weekly', 'Monthly'];
 
-   void _createGroup() async {
-    if (_cycleType == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Please select a Cycle Type')),
-      );
-      return;
-    }
+  //  void _createGroup() async {
+  //   if (_cycleType == null) {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       SnackBar(content: Text('Please select a Cycle Type')),
+  //     );
+  //     return;
+  //   }
 
-    // Attempt to parse the contribution amount
-    // final contributionAmount = double.tryParse(_contributionAmountController.text);
-    // if (contributionAmount == null) {
-    //   ScaffoldMessenger.of(context).showSnackBar(
-    //     SnackBar(content: Text('Please enter a valid Contribution Amount')),
-    //   );
-    //   return;
-    // }
+  //   // Attempt to parse the contribution amount
+  //   // final contributionAmount = double.tryParse(_contributionAmountController.text);
+  //   // if (contributionAmount == null) {
+  //   //   ScaffoldMessenger.of(context).showSnackBar(
+  //   //     SnackBar(content: Text('Please enter a valid Contribution Amount')),
+  //   //   );
+  //   //   return;
+  //   // }
 
-    try {
+  //   try {
 
-      final response = await GroupService.createGroup(
-        _groupNameController.text,
-        _cycleType!, // Use the non-nullable _cycleType
-        _contributionAmountController.text,
-        _groupDescriptionController.text,
-      );
-        print('Cycle Type : $response');
+  //     final response = await GroupService.createGroup(
+  //       _groupNameController.text,
+  //       _cycleType!, // Use the non-nullable _cycleType
+  //       _contributionAmountController.text,
+  //       _groupDescriptionController.text,
+  //     );
+  //       print('Cycle Type : $response');
 
-      if (response.statusCode == 201) { // Assuming a successful creation returns 201 (Created)
-        print('Group created successfully');
-        Navigator.pushNamed(context, AppRoutes.dashboard);
-      } else {
-        print('Failed to create group. Status code: ${response.statusCode}');
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Failed to create group. Please try again.')),
-        );
-      }
-    } catch (e) {
-      print('Error during group creation: $e');
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('An unexpected error occurred.')),
-      );
-    }
-  }
+  //     if (response.statusCode == 201) { // Assuming a successful creation returns 201 (Created)
+  //       print('Group created successfully');
+  //       Navigator.pushNamed(context, AppRoutes.new_overview);
+  //     } else {
+  //       print('Failed to create group. Status code: ${response.statusCode}');
+  //       ScaffoldMessenger.of(context).showSnackBar(
+  //         SnackBar(content: Text('Failed to create group. Please try again.')),
+  //       );
+  //     }
+  //   } catch (e) {
+  //     print('Error during group creation: $e');
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       SnackBar(content: Text('An unexpected error occurred.')),
+  //     );
+  //   }
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -159,7 +157,9 @@ class _CreateGroupScreenState extends State<CreateGroupScreen> {
             ),
             SizedBox(height: 24.0),
             ElevatedButton(
-              onPressed: _createGroup,
+              onPressed: () => {
+                Navigator.pushNamed(context, AppRoutes.new_dashboard)
+              },
                //create group logic
                 //print('Create Group pressed');
                 //Navigator.pushNamed(context, AppRoutes.dashboard);,

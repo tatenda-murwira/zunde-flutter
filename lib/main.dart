@@ -13,7 +13,7 @@ class MkandoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Zunde',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: zbGreen,
         scaffoldBackgroundColor: Colors.white,

@@ -9,6 +9,7 @@ android {
     namespace = "com.example.mukando_app"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "28.0.13004108"
+    
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

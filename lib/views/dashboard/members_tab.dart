@@ -5,7 +5,7 @@ class MembersScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F5F5), // Consistent background
+      backgroundColor: const Color(0xFFF5F5F5), 
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -16,7 +16,7 @@ class MembersScreen extends StatelessWidget {
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16),
-            // Example member list
+          
             Card(
               elevation: 2,
               shape: RoundedRectangleBorder(
@@ -24,9 +24,9 @@ class MembersScreen extends StatelessWidget {
               ),
               margin: EdgeInsets.symmetric(vertical: 4),
               child: ListTile(
-                leading: CircleAvatar(child: Text('S'), backgroundColor: const Color(0xFFD4EDDA)), //Light green
-                title: Text('Sarah',  style: TextStyle(fontWeight: FontWeight.w500)),
-                subtitle: Text('Admin'),
+                leading: CircleAvatar(child: Text('M'), backgroundColor: const Color(0xFFD4EDDA)), 
+                title: Text('Mufaro',  style: TextStyle(fontWeight: FontWeight.w500)),
+                subtitle: Text('Member'),
               ),
             ),
              Card(
@@ -36,8 +36,8 @@ class MembersScreen extends StatelessWidget {
               ),
               margin: EdgeInsets.symmetric(vertical: 4),
               child: ListTile(
-                leading: CircleAvatar(child: Text('J'),  backgroundColor: const Color(0xFFD4EDDA)),
-                title: Text('John',  style: TextStyle(fontWeight: FontWeight.w500)),
+                leading: CircleAvatar(child: Text('T'),  backgroundColor: const Color(0xFFD4EDDA)),
+                title: Text('Tanaka',  style: TextStyle(fontWeight: FontWeight.w500)),
                 subtitle: Text('Member'),
               ),
             ),
@@ -48,8 +48,8 @@ class MembersScreen extends StatelessWidget {
               ),
               margin: EdgeInsets.symmetric(vertical: 4),
               child: ListTile(
-                leading: CircleAvatar(child: Text('P'),  backgroundColor: const Color(0xFFD4EDDA)),
-                title: Text('Peter',  style: TextStyle(fontWeight: FontWeight.w500)),
+                leading: CircleAvatar(child: Text('B'),  backgroundColor: const Color(0xFFD4EDDA)),
+                title: Text('Brian',  style: TextStyle(fontWeight: FontWeight.w500)),
                 subtitle: Text('Member'),
               ),
             ),

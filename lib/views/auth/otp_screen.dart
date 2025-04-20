@@ -17,22 +17,22 @@ class _OtpScreenState extends State<OtpScreen> {
       List.generate(6, (index) => TextEditingController());
   List<FocusNode> _focusNodes = List.generate(6, (index) => FocusNode());
 
-  String _otpCode = "";
+  // String _otpCode = "";
 
-  void _verifyOtp() async {
-    _otpCode = _otpControllers.map((controller) => controller.text).join();
+  // void _verifyOtp() async {
+  //   _otpCode = _otpControllers.map((controller) => controller.text).join();
 
-    final response = await AuthService.verifyOTP(_otpCode, widget.phoneNumber);
-    if (response.statusCode == 200) {
-       //otp to the server verification
-      print("OTP Verified for ${widget.phoneNumber}");
-      Navigator.pushReplacementNamed(context, AppRoutes.createGroup);
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Invalid OTP")),
-      );
-    }
-  }
+  //   final response = await AuthService.verifyOTP(_otpCode, widget.phoneNumber);
+  //   if (response.statusCode == 200) {
+  //      //otp to the server verification
+  //     print("OTP Verified for ${widget.phoneNumber}");
+  //     Navigator.pushReplacementNamed(context, AppRoutes.createGroup);
+  //   } else {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       SnackBar(content: Text("Invalid OTP")),
+  //     );
+  //   }
+  // }
 
   void _resendOtp() {
    //otp logic//
@@ -160,7 +160,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     ),
                     SizedBox(height: 24.0),
                     ElevatedButton(
-                      onPressed: _verifyOtp,
+                      onPressed:() => Navigator.pushNamed(context, AppRoutes.createGroup),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF1B5E20),
                         padding: EdgeInsets.symmetric(vertical: 16.0),
@@ -200,7 +200,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     ),
                     SizedBox(height: 16.0),
                     OutlinedButton(
-                      onPressed: _resendOtp,
+                      onPressed: () => Navigator.pushNamed(context, AppRoutes.login),
                       style: OutlinedButton.styleFrom(
                         side: BorderSide(
                             color: const Color.fromARGB(255, 21, 87, 31)),

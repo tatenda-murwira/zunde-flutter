@@ -16,6 +16,9 @@ import '../views/payments/onemoney.dart';
 import '../views/payments/mastercard.dart';
 import '../views/payments/visa.dart';
 import '../views/payments/ecocash.dart';
+import '../views/dashboard/new_group_dashboard.dart';
+import '../views/dashboard/overview_new.dart';
+import '../views/chatbot/chatbot.dart';
 
 class AppRoutes {
   static const String splash = '/';
@@ -35,6 +38,10 @@ class AppRoutes {
     static const String mastercard ='/mastercard';
     static const String visa ='/visa';
     static const String onemoney ='/onemoney';
+    static const String qr ='/qr';
+    static const String new_dashboard ='/new_dashboard';
+    static const String new_overview ='/new_overview';
+    static const String chatbot ='/chatbot';
     
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -61,8 +68,25 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => SignupScreen());
       case tips:
         return MaterialPageRoute(builder: (_) => TipsScreen());
+      case ecocash:
+        return MaterialPageRoute(builder: (_) => EcoCashPaymentScreen());
+      case onemoney:
+        return MaterialPageRoute(builder: (_) => OneMoneyPaymentScreen());
+      case visa:
+        return MaterialPageRoute(builder: (_) => VisaPaymentScreen());
+      case mastercard:
+        return MaterialPageRoute(builder: (_) => MasterCardPaymentScreen());
+      case bankcard:
+        return MaterialPageRoute(builder: (_) => BankPaymentScreen());
+      case new_dashboard:
+        return MaterialPageRoute(builder: (_) => NewGroupDashboard());
       case payment:
         return MaterialPageRoute(builder: (_) => PaymentScreen());
+      case new_overview:
+        return MaterialPageRoute(builder: (_) => NewOverviewScreen());
+      case chatbot:
+        return MaterialPageRoute(builder: (_) => Chatbot());
+        
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

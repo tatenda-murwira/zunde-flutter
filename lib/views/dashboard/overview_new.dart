@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../routes/app_routes.dart'; 
-class OverviewScreen extends StatelessWidget {
+class NewOverviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +30,7 @@ class OverviewScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 8.0),
                   Text(
-                    '\$120', 
+                    '\$0.00', 
                     style: TextStyle(
                       fontSize: 36.0,  
                       fontWeight: FontWeight.w700, 
@@ -72,7 +72,7 @@ class OverviewScreen extends StatelessWidget {
                       Icon(Icons.timer, color: const Color(0xFF1B5E20), size: 24,), 
                       SizedBox(width: 8.0),
                       Text(
-                        '72:00:00', 
+                        '00:00:00', 
                         style: TextStyle(
                           fontSize: 24.0, 
                           fontWeight: FontWeight.w500,
@@ -83,7 +83,7 @@ class OverviewScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 8.0),
                   Text(
-                    'Thursday, May 15 2025', 
+                    '-----,-----, ----', 
                     style: TextStyle(
                       fontSize: 12.0,
                       color: Colors.grey[600],
@@ -188,6 +188,7 @@ class OverviewScreen extends StatelessWidget {
             ),
             SizedBox(height: 8.0),
            
+
             Card(
               elevation: 2,
               shape: RoundedRectangleBorder(
@@ -196,24 +197,12 @@ class OverviewScreen extends StatelessWidget {
               margin: EdgeInsets.symmetric(vertical: 4),
               child: ListTile(
                 title: Text(
-                  'Tanaka contributed \$20',
-                  style: TextStyle(fontWeight: FontWeight.w500),
+                  'No Activity Yet',
+                  style: TextStyle(fontWeight: FontWeight.w500
+
+                  ),
                 ),
-                subtitle: Text('2 hours ago', style: TextStyle(fontSize: 12, color: Colors.grey[600])),
-              ),
-            ),
-            Card(
-              elevation: 2,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
-              margin: EdgeInsets.symmetric(vertical: 4),
-              child: ListTile(
-                title: Text(
-                  'Mufaro contributed \$30',
-                  style: TextStyle(fontWeight: FontWeight.w500),
-                ),
-                subtitle: Text('Yesterday',  style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+               
               ),
             ),
           ],
