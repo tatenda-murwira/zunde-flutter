@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../routes/app_routes.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override
@@ -22,7 +23,8 @@ class SettingsScreen extends StatelessWidget {
                 title: Text('Edit Group Name',  style: TextStyle(fontWeight: FontWeight.w500)),
                 trailing: Icon(Icons.arrow_forward),
                 onTap: () {
-                  // Navigate to edit group name screen
+                Navigator.pushNamed(context, AppRoutes.edit_group_name,
+                    );
                 },
               ),
             ),
@@ -36,7 +38,8 @@ class SettingsScreen extends StatelessWidget {
                 title: Text('Change Cycle Type',  style: TextStyle(fontWeight: FontWeight.w500)),
                 trailing: Icon(Icons.arrow_forward),
                 onTap: () {
-                  // Navigate to change cycle type
+                   Navigator.pushNamed(context, AppRoutes.change_cycle_type,
+                    );
                 },
               ),
             ),
@@ -50,7 +53,8 @@ class SettingsScreen extends StatelessWidget {
                 title: Text('Change Contribution Amount',  style: TextStyle(fontWeight: FontWeight.w500)),
                 trailing: Icon(Icons.arrow_forward),
                 onTap: () {
-                  // Navigate to change contribution amount
+                  Navigator.pushNamed(context, AppRoutes.change_contribution,
+                    );
                 },
               ),
             ),
@@ -61,10 +65,11 @@ class SettingsScreen extends StatelessWidget {
               ),
                margin: EdgeInsets.symmetric(vertical: 4),
               child: ListTile(
-                title: Text('Notifications Settings',  style: TextStyle(fontWeight: FontWeight.w500)),
+                title: Text('Share group invite link',  style: TextStyle(fontWeight: FontWeight.w500)),
                 trailing: Icon(Icons.arrow_forward),
                 onTap: () {
-                  // Navigate to change contribution amount
+                   Navigator.pushNamed(context, AppRoutes.share_invite_link,
+                    );
                 },
               ),
             ),

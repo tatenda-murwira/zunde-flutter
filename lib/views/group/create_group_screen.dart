@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mukando_app/core/constants/colors.dart';
 import '../../routes/app_routes.dart';
 import '../../services/group_service.dart';
 
@@ -64,7 +65,7 @@ class _CreateGroupScreenState extends State<CreateGroupScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF1B5E20),
+        backgroundColor: zbGreen,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.pop(context),
@@ -164,7 +165,7 @@ class _CreateGroupScreenState extends State<CreateGroupScreen> {
                 //print('Create Group pressed');
                 //Navigator.pushNamed(context, AppRoutes.dashboard);,
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF1B5E20),
+                backgroundColor: zbGreen,
                 padding: EdgeInsets.symmetric(vertical: 16.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8.0),
@@ -201,7 +202,7 @@ class _CreateGroupScreenState extends State<CreateGroupScreen> {
                 Navigator.pushNamed(context, AppRoutes.joinGroup);
               },
               style: OutlinedButton.styleFrom(
-                side: BorderSide(color: const Color(0xFF1B5E20)),
+                side: BorderSide(color: zbGreen),
                 padding: EdgeInsets.symmetric(vertical: 16.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8.0),
@@ -210,7 +211,7 @@ class _CreateGroupScreenState extends State<CreateGroupScreen> {
               child: Text(
                 'Join Group',
                 style: TextStyle(
-                  color: const Color(0xFF1B5E20),
+                  color:zbGreen,
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
                 ),

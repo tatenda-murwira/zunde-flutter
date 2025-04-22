@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mukando_app/core/constants/colors.dart';
 import '../dashboard/history_tab.dart';
 import '../dashboard/members_tab.dart';
 import '../dashboard/settings_tab.dart';
@@ -23,7 +24,7 @@ class _NewGroupDashboardState extends State<NewGroupDashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar( 
-        backgroundColor: const Color(0xFF1B5E20),
+        backgroundColor: zbGreen,
         title: Text(
           'Group Dashboard',
           style: TextStyle(color: Colors.white),
@@ -44,7 +45,7 @@ class _NewGroupDashboardState extends State<NewGroupDashboard> {
                 child: Text('Cancel'),
               ),
               ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: const Color.fromARGB(255, 14, 137, 76)),
+                style: ElevatedButton.styleFrom(backgroundColor: zbGreen),
                 onPressed: () {
                   Navigator.pop(context); 
                   Navigator.popUntil(context, (route) => route.isFirst); 
@@ -64,7 +65,7 @@ class _NewGroupDashboardState extends State<NewGroupDashboard> {
       floatingActionButton: FloatingActionButton(
         // Add FAB
         onPressed: () => Navigator.pushNamed(context, AppRoutes.chatbot),
-        backgroundColor: const Color(0xFF1B5E20),
+        backgroundColor: zbGreen,
         foregroundColor: Colors.white,
         tooltip: 'Add Contribution', // Add a tooltip for accessibility
         child: const Icon(Icons.chat_bubble_outline),
@@ -123,7 +124,7 @@ class _NewGroupDashboardState extends State<NewGroupDashboard> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: const Color(0xFF1B5E20),
+        selectedItemColor: zbGreen,
         unselectedItemColor: Colors.grey,
         onTap: _onItemTapped,
         showUnselectedLabels: true,

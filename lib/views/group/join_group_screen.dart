@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../routes/app_routes.dart';
+import '../../core/constants/colors.dart';
 
 
 class JoinGroupScreen extends StatelessWidget {
@@ -9,7 +10,7 @@ class JoinGroupScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF1B5E20), // 
+        backgroundColor: zbGreen, // 
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.pop(context),
@@ -65,10 +66,10 @@ class JoinGroupScreen extends StatelessWidget {
                           Navigator.pushNamed(context, AppRoutes.qr);
                       },
                       icon: Icon(Icons.qr_code_scanner,
-                          color: const Color(0xFF1B5E20)),
+                          color: zbGreen),
                       label: Text(
                         'Scan QR Code',
-                        style: TextStyle(color: const Color(0xFF1B5E20)),
+                        style: TextStyle(color: zbGreen),
                       ),
                     ),
                   ),
@@ -83,7 +84,7 @@ class JoinGroupScreen extends StatelessWidget {
                 Navigator.pushNamed(context, AppRoutes.dashboard);
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF1B5E20), 
+                backgroundColor: zbGreen, 
                 padding: EdgeInsets.symmetric(vertical: 16.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8.0),

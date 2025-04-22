@@ -1,4 +1,3 @@
-// styled_signup_screen.dart
 import 'package:flutter/material.dart';
 import '../../core/constants/colors.dart';
 import '../../services/auth_services.dart';

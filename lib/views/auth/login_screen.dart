@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../../routes/app_routes.dart';
-//import '../../core/constants/colors.dart'; // 
+import '../../core/constants/colors.dart'; // 
 
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF1B5E20), // 
+      backgroundColor: zbGreen, // 
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(24.0),
@@ -26,7 +26,7 @@ class LoginScreen extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
-                    color: const Color(0xFF1B5E20),
+                    color: zbGreen,
                   ),
                 ),
                 SizedBox(height: 16.0),
@@ -74,7 +74,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
-                      borderSide: BorderSide(color: const Color(0xFF1B5E20), width: 2.0),
+                      borderSide: BorderSide(color: zbGreen, width: 2.0),
                     ),
                     contentPadding: EdgeInsets.all(16.0),
                   ),
@@ -89,7 +89,7 @@ class LoginScreen extends StatelessWidget {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF1B5E20),
+                    backgroundColor: zbGreen,
                     padding: EdgeInsets.symmetric(vertical: 16.0),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -120,7 +120,7 @@ class LoginScreen extends StatelessWidget {
                       child: Text(
                         'Support',
                         style: TextStyle(
-                          color: const Color(0xFF1B5E20),
+                          color: zbGreen,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -131,7 +131,7 @@ class LoginScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'New to Mkando? ',
+                      'New to the App? ',
                       style: TextStyle(color: Colors.grey[600]),
                     ),
                     TextButton(
@@ -145,7 +145,7 @@ class LoginScreen extends StatelessWidget {
                       child: Text(
                         'Sign Up',
                         style: TextStyle(
-                          color: const Color(0xFF1B5E20),
+                          color: zbGreen,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

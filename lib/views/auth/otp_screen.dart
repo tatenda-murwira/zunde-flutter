@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../routes/app_routes.dart';
-//import '../../core/constants/colors.dart';
+import '../../core/constants/colors.dart';
 import '../../services/auth_services.dart';
 
 class OtpScreen extends StatefulWidget {
@@ -68,7 +68,7 @@ class _OtpScreenState extends State<OtpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF1B5E20),
+        backgroundColor:  zbGreen,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: _goBack,
@@ -162,7 +162,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     ElevatedButton(
                       onPressed:() => Navigator.pushNamed(context, AppRoutes.createGroup),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF1B5E20),
+                        backgroundColor: zbGreen,
                         padding: EdgeInsets.symmetric(vertical: 16.0),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
@@ -203,7 +203,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       onPressed: () => Navigator.pushNamed(context, AppRoutes.login),
                       style: OutlinedButton.styleFrom(
                         side: BorderSide(
-                            color: const Color.fromARGB(255, 21, 87, 31)),
+                            color: zbGreen),
                         padding: EdgeInsets.symmetric(vertical: 16.0),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
@@ -212,7 +212,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       child: Text(
                         "Resend OTP",
                         style: TextStyle(
-                          color: const Color.fromARGB(255, 20, 101, 58),
+                          color:zbGreen,
                           fontSize: 18.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -226,7 +226,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         child: Text(
                           "Wrong phone number? Go back",
                           style: TextStyle(
-                            color: const Color(0xFF1B5E20),
+                            color: zbGreen,
                             fontWeight: FontWeight.w500,
                           ),
                         ),

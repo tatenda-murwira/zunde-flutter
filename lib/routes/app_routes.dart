@@ -19,6 +19,10 @@ import '../views/payments/ecocash.dart';
 import '../views/dashboard/new_group_dashboard.dart';
 import '../views/dashboard/overview_new.dart';
 import '../views/chatbot/chatbot.dart';
+import '../group_settings/change_contribution.dart';
+import '../group_settings/change_cycle_type.dart';
+import '../group_settings/edit_group_name.dart';
+import '../group_settings/share_invite_link.dart';
 
 class AppRoutes {
   static const String splash = '/';
@@ -42,6 +46,10 @@ class AppRoutes {
     static const String new_dashboard ='/new_dashboard';
     static const String new_overview ='/new_overview';
     static const String chatbot ='/chatbot';
+    static const String change_contribution='/changecontribution';
+    static const String change_cycle_type='/change_cycle_type';
+    static const String edit_group_name ='/edit_group_name';
+    static const String share_invite_link='/share_link';
     
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -84,8 +92,18 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => PaymentScreen());
       case new_overview:
         return MaterialPageRoute(builder: (_) => NewOverviewScreen());
+     
+      case change_contribution:
+        return MaterialPageRoute(builder: (_) => ChangeContributionAmountScreen());
       case chatbot:
         return MaterialPageRoute(builder: (_) => Chatbot());
+      case change_cycle_type:
+        return MaterialPageRoute(builder: (_) => ChangeCycleTypeScreen());
+      case edit_group_name:
+        return MaterialPageRoute(builder: (_) => 
+         EditGroupNameScreen(currentGroupName: '',));
+      case share_invite_link:
+        return MaterialPageRoute(builder: (_) => ShareGroupInviteLinkScreen(groupName: '',));
         
       default:
         return MaterialPageRoute(

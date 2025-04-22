@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../routes/app_routes.dart'; 
+import '../../core/constants/colors.dart';
+
 class OverviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class OverviewScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 36.0,  
                       fontWeight: FontWeight.w700, 
-                      color: const Color(0xFF1B5E20), 
+                      color:zbGreen, 
                     ),
                   ),
                   SizedBox(height: 8.0),
@@ -69,7 +71,7 @@ class OverviewScreen extends StatelessWidget {
                   SizedBox(height: 8.0),
                   Row(
                     children: [
-                      Icon(Icons.timer, color: const Color(0xFF1B5E20), size: 24,), 
+                      Icon(Icons.timer, color:zbGreen, size: 24,), 
                       SizedBox(width: 8.0),
                       Text(
                         '72:00:00', 
@@ -98,7 +100,7 @@ class OverviewScreen extends StatelessWidget {
                 Navigator.pushNamed(context, AppRoutes.contribution);
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF1B5E20),
+                backgroundColor: zbGreen,
                 padding: EdgeInsets.symmetric(vertical: 16.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8.0),
@@ -126,7 +128,7 @@ class OverviewScreen extends StatelessWidget {
                 Navigator.pushNamed(context, AppRoutes.notifications);
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF1B5E20),
+                backgroundColor:zbGreen,
                 padding: EdgeInsets.symmetric(vertical: 16.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8.0),
@@ -155,7 +157,7 @@ class OverviewScreen extends StatelessWidget {
                 Navigator.pushNamed(context, AppRoutes.tips);
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF1B5E20),
+                backgroundColor: zbGreen,
                 padding: EdgeInsets.symmetric(vertical: 16.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8.0),
