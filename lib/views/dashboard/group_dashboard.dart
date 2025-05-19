@@ -24,7 +24,7 @@ class _GroupDashboardState extends State<GroupDashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:zbGreen,
+        backgroundColor: zbGreen,
         title: const Text(
           'Group Dashboard',
           style: TextStyle(color: Colors.white),
@@ -36,7 +36,7 @@ class _GroupDashboardState extends State<GroupDashboard> {
             onPressed: () {
               _showLogoutDialog(context); // Extract dialog to a method
             },
-          )
+          ),
         ],
       ),
       body: _buildBody(),
@@ -48,35 +48,34 @@ class _GroupDashboardState extends State<GroupDashboard> {
         tooltip: 'Add Contribution', // Add a tooltip for accessibility
         child: const Icon(Icons.chat_bubble_outline),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation
-          .endFloat, // Position at the bottom right
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.endFloat, // Position at the bottom right
       bottomNavigationBar: _buildBottomNavigationBar(),
     );
   }
 
-  
   void _showLogoutDialog(BuildContext context) {
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Confirm Logout'),
-        content: const Text('Are you sure you want to log out?'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+      builder:
+          (context) => AlertDialog(
+            title: const Text('Confirm Logout'),
+            content: const Text('Are you sure you want to log out?'),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('Cancel'),
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: zbGreen),
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.popUntil(context, (route) => route.isFirst);
+                },
+                child: const Text('Logout'),
+              ),
+            ],
           ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                backgroundColor: zbGreen),
-            onPressed: () {
-              Navigator.pop(context);
-              Navigator.popUntil(context, (route) => route.isFirst);
-            },
-            child: const Text('Logout'),
-          ),
-        ],
-      ),
     );
   }
 
@@ -99,7 +98,7 @@ class _GroupDashboardState extends State<GroupDashboard> {
   //           ),
   //            const SizedBox(height: 12),
   //           // Add a date picker
-            
+
   //         ],
   //       ),
   //       actions: [
